@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-un-navy: #1B365D;     /* Deep Navy Blue from your logo text */
+  --color-un-gold: #C5A059;     /* Warm Gold from your logo "PRO" text */
+  --color-un-green: #7BA684;    /* Sage Green from your logo roof icon */
+  --color-un-charcoal: #4A4A4A; /* Charcoal Grey from your logo "UN" lettering */
+}
+
+html {
+  scroll-behavior: smooth;
+}
