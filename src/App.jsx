@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+// Change line 3 in App.jsx to:
+import Navbar from './components/navbar';
 import Hero from './sections/Hero';
 import Services from './sections/Services';
 import Projects from './sections/Projects';
