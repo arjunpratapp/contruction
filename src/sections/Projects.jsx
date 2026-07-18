@@ -8,8 +8,8 @@ const ongoingProjects = [
     description: "Ready-to-construct residential plots featuring wide roads, reliable water connectivity, and gated security parameters."
   },
   {
-    title: "Urbannest Smart Township - Kalwar Road",
-    location: "Kalwar Road, Jaipur",
+    title: "Urbannest Smart Township - Kalwar",
+    location: "Kalwar, Jaipur",
     status: "Newly Launched Colony",
     description: "An expanding community township layout featuring modern civic infrastructure, demarcated plots, and park spaces."
   }
