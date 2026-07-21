@@ -6,7 +6,7 @@ import imranImg from '../assets/imran.png';
 const BANNER_POSITIONS = [
   {
     name: 'top-center',
-    classes: 'top-24 left-1/2 -translate-x-1/2',
+    classes: 'top-28 left-1/2 -translate-x-1/2',
     visibleAnimation: 'translate-y-0 opacity-100 pointer-events-auto',
     hiddenAnimation: '-translate-y-12 opacity-0 pointer-events-none'
   },
@@ -177,7 +177,7 @@ export default function Hero() {
     }
   };
 
-  // Helper to slice multi-color brand logo text for typewriter (CENTERED)
+  // Helper to slice multi-color brand logo text for typewriter (ENLARGED & EYE-CATCHING)
   const renderLogoTypewriter = () => {
     const count = logoText.length;
     const urbanPart = fullLogoString.substring(0, Math.min(count, 5));
@@ -185,41 +185,41 @@ export default function Hero() {
     const proPart = count > 9 ? fullLogoString.substring(9, Math.min(count, 13)) : "";
 
     return (
-      <div className="flex flex-col items-center text-center">
-        <div className="flex items-center justify-center gap-3">
-          {/* Logo Emblem Icon */}
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-un-gold/60 bg-un-navy flex items-center justify-center shadow-lg overflow-hidden shrink-0">
-            <div className="absolute inset-0 rounded-full border-t-2 border-un-gold/80 transform -rotate-45"></div>
+      <div className="flex flex-col items-center text-center py-4 sm:py-6">
+        <div className="flex items-center justify-center gap-3 sm:gap-5 md:gap-6">
+          {/* Scaled & Glowing Emblem Icon */}
+          <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-2 border-un-gold/80 bg-un-navy/90 flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.3)] overflow-hidden shrink-0 transition-transform hover:scale-105 duration-300">
+            <div className="absolute inset-0 rounded-full border-t-2 border-un-gold transform -rotate-45"></div>
             <div className="relative flex flex-col items-center justify-center">
               <div className="relative flex items-center justify-center">
-                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 12l9-9 9 9" />
                 </svg>
-                <span className="absolute top-0.5 text-[8px] text-un-gold font-black">▲</span>
+                <span className="absolute top-0.5 text-[10px] sm:text-xs text-un-gold font-black">▲</span>
               </div>
-              <span className="font-black text-[10px] tracking-tighter text-slate-200 -mt-1">UN</span>
+              <span className="font-black text-xs sm:text-sm md:text-base tracking-tighter text-slate-100 -mt-1 sm:-mt-1.5">UN</span>
             </div>
           </div>
 
-          {/* Typewritten Colored Brand Title */}
-          <div className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider leading-none">
-            <span className="text-white">{urbanPart}</span>
-            <span className="text-emerald-400">{nestPart}</span>
-            <span className="text-un-gold">{proPart}</span>
-            <span className="inline-block text-un-gold font-light animate-[pulse_0.8s_infinite] ml-1">|</span>
+          {/* Eye-Catching Scaled Typewritten Brand Title */}
+          <div className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-wider leading-none drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+            <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">{urbanPart}</span>
+            <span className="text-emerald-400 drop-shadow-[0_0_15px_rgba(52,211,153,0.3)]">{nestPart}</span>
+            <span className="text-un-gold drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">{proPart}</span>
+            <span className="inline-block text-un-gold font-light animate-[pulse_0.8s_infinite] ml-1 sm:ml-2">|</span>
           </div>
         </div>
 
-        {/* Sub-Tagline appearing once logo completes typing */}
-        <span className={`text-[10px] sm:text-xs font-extrabold tracking-[0.25em] text-slate-300 uppercase mt-1.5 transition-opacity duration-500 ${count >= 13 ? 'opacity-100' : 'opacity-0'}`}>
-          SAPNO SE GHAR TAK
+        {/* Dynamic Tagline with High Contrast */}
+        <span className={`text-xs sm:text-sm md:text-base lg:text-lg font-black tracking-[0.3em] sm:tracking-[0.4em] text-un-gold/90 uppercase mt-3 sm:mt-4 transition-all duration-700 ${count >= 13 ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
+          ✨ SAPNO SE GHAR TAK ✨
         </span>
       </div>
     );
   };
 
   return (
-    <div className="bg-un-navy text-white min-h-screen relative overflow-hidden pt-20 md:pt-24">
+    <div className="bg-un-navy text-white min-h-screen relative overflow-hidden pt-16 md:pt-20">
       
       {/* ================= 📢 DYNAMIC FLOATING AD BANNER ================= */}
       <div 
@@ -279,13 +279,13 @@ export default function Hero() {
       <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-un-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-un-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      {/* ================= 🖊️ LOGO TYPEWRITER IN BLANK HEADER SPACE (CENTER ALIGNED) ================= */}
-      <div className="relative z-30 max-w-7xl mx-auto px-6 pt-4 pb-2 flex justify-center items-center">
+      {/* ================= 🖊️ ENLARGED LOGO TYPEWRITER HEADER ================= */}
+      <div className="relative z-30 max-w-7xl mx-auto px-6 pt-6 pb-4 flex justify-center items-center">
         {renderLogoTypewriter()}
       </div>
 
       {/* ================= HERO INTRO SECTION ================= */}
-      <section className="relative min-h-[calc(100vh-10rem)] pb-16 md:py-0 flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-12rem)] pb-16 md:py-0 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-25 mix-blend-luminosity scale-105 animate-[pulse_8s_ease-in-out_infinite]"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-un-navy/80 via-un-navy/95 to-un-navy"></div>
         <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
